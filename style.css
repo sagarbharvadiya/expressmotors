@@ -62,7 +62,7 @@ nav ul {
 }
 
 nav ul li {
-  margin-right: 30px;
+  margin-right: 20px;
 }
 
 nav ul li a {
@@ -80,6 +80,9 @@ nav ul li a::after{
   font-weight: var(--font-weight-bold);
 }
 nav ul li a:hover{
+  color: var(--color-primary);
+}
+nav ul li a:hover::after{
   color: var(--color-primary);
 }
 nav .d-flex{
@@ -123,6 +126,97 @@ input::placeholder{
   font-size: 20px; 
   color: white; 
   cursor: pointer; }
+
+  /* banner section  */
+  .banner{
+    background-image: url(asset/banner/bgimg.jpg);
+   
+      
+  }
+  .homepagebanner{
+    padding: 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-gap: 20px;
+  
+  }
+  
+  
+  .banner_text_content .title h1{
+    font-size: 35px;
+    font-weight:700;
+    color: var(--color-title-text);
+  }
+  .banner_text_content .title .vc_sep_line{
+    height: 1px;
+    border-top: 2px solid #ebebeb;
+    border-color: var(--color-title-text);
+    display: block;
+    width: 50%;
+  }
+  .promo_price{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+  }
+  
+  .promo_price p{
+   font-size: 80px;
+   font-weight:500;
+   color: red;
+   margin-bottom: 50px;
+   display: flex;
+  }
+  .promo_price p span{
+    font-size:150px;
+    font-weight: 300;
+    color: red;
+   
+  }
+.shop_btn{
+  border: 2px solid #fff;
+  padding: 12px 95px;
+  border-radius: 35px;
+  cursor: pointer;
+  width: 60%;
+  transition: transform 0.3s ease-in;
+  margin-top: 50px;
+}
+.shop_btn a{
+  text-decoration: none;
+  font-size: 26px;
+  color: #fff;
+  text-align: center;
+}
+.shop_btn a:hover{
+  color: var(--color-title-text);
+  transform: scale(0.9);
+}
+.banner_image img{
+  width: 100%;
+
+  margin: auto;
+
+}
+.acceleride img{
+  width: 120px;
+  padding-top: 50px;
+
+}
+.banner_text_content .d-flex{
+  display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+
+}
+.car_details p{
+  font-size: var(--font-size-normal);
+  color: var(--color-title-text);
+  font-weight:300;
+  text-align: justify;
+  margin-top: 10px;
+}
 /* car section */
 .car-container {
   display: grid;
@@ -220,12 +314,13 @@ input::placeholder{
 .testimonials .title h1 {
   color: var(--color-black);
 }
-.testimonials>.vc_sep_line{
+.testimonials .title .vc_sep_line{
   height: 1px;
     border-top: 1px solid #ebebeb;
     border-color: var(--color-border);
     display: block;
     width: 65%;
+    margin-top: 20px;
 }
 
 .testimonials .rich-text-content>p {
@@ -233,7 +328,9 @@ input::placeholder{
   color: var(--color-grey);
   font-weight: var(--font-weight-normal);
   line-height: 30px;
-  position: relative;}
+  position: relative;
+  margin-bottom: 30px;
+}
 
 .testimonials .experts span {
   font-size: 14px;
@@ -475,7 +572,21 @@ h4 {
     width: 100%;
     margin-bottom: 20px;
   }
-
+  .homepagebanner{
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .shop_btn{
+    width: 100%;
+  }
+  .banner_text_content .d-flex{
+    flex-direction: column;
+  }
+  .promo_price p span{
+    font-size: 60px;
+  }
+  .promo_price p{
+    font-size: 40px;
+  }
   .car_logo {
     grid-template-columns: repeat(2, 1fr);
     gap: 1%;
