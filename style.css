@@ -116,10 +116,10 @@ input::placeholder{
   font-size: var(--font-size-normal);
   font-weight: var(--font-weight-bold);
 }
- i{
+.search_bar i{
   background-color:var(--color-primary);
 }
- i {
+.search_bar i {
   font-size: 20px; 
   color: white; 
   cursor: pointer; }
