@@ -1,7 +1,8 @@
 :root {
   --font-size-normal: 16px;
   --font-size-title: 35px;
-  --line-height: 35px --color-black: #000;
+  --line-height: 35px;
+  --color-black: #000;
   --color-grey: grey;
   --color-primary: #aed136;
   --color-border: #808080;
@@ -26,8 +27,6 @@
 h1 {
   font-size: var(--font-size-title);
   font-weight: var(--font-weight-bold);
-  /* line-height: var(--line-height);
-  margin-bottom: 15px; */
 }
 .header{
   padding: 10px 0px;
@@ -276,7 +275,7 @@ input::placeholder{
 }
 
 /* for tyres  */
-.sub-title{
+.sub-title {
   color: #808080;
 }
 
@@ -289,6 +288,7 @@ input::placeholder{
 .tyres_type {
   padding: 20px 0px;
 }
+
 .tyres img {
   max-width: 100%;
   margin: auto;
@@ -554,6 +554,95 @@ h4 {
   font-weight: var(--font-weight-normal);
 }
 
+/* contact form  */
+
+.contact-form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* gap: 20px; */
+  padding: 50px 0;
+}
+
+.grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+
+.left-section h2 {
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 8px;
+}
+
+.left-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-container form {
+  background-color: #F5FFFE;
+  padding: 80px 100px 80px 60px;
+  border-radius: 0 15px 15px 0;
+  box-shadow: 6px 6px 10px rgb(0 0 0 / 14%);
+}
+
+.contact-form-container form h2 {
+  margin-bottom: 10px;
+}
+
+.contact-form-container label {
+  display: block;
+  margin: 10px 0;
+}
+
+.contact-form-container input[type="email"],
+.contact-form-container input[type="password"] {
+  background-color: #CAECFF70;
+  border-radius: 23px;
+  border: 0;
+  height: 44px;
+  padding: 15px 30px;
+  width: 100%;
+  outline: none;
+}
+
+.contact-form-container button {
+  background-color: #42A3E5;
+  text-transform: capitalize;
+  border-radius: 15px;
+  padding: 11px 31px;
+  color: var(--color-background);
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.google-button{
+  background: var(--color-background);
+  color:var(--color-black);
+  border: 1px solid #707070;
+  border-radius: 23px;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4px;
+
+}
+
+.contact-form-container a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+
 @media only screen and (max-width: 768px) {
  .navbar .d-flex{
   flex-direction: column;
@@ -614,9 +703,12 @@ h4 {
   .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
+
+  .contact-form-container {
+    grid-template-columns: 1fr;
+  }
   .car_experts {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
-
 
 }
